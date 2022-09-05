@@ -26,8 +26,8 @@ public class Radio {
         if (currentStation < maxStation) {
             currentStation = currentStation + 1;
         }
-        if (currentStation >= maxStation) {
-            currentStation = currentStation + 1;
+        if (currentStation == maxStation) {
+            currentStation = minStation;
         }
     }
 
