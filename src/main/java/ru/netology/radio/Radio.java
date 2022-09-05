@@ -31,4 +31,48 @@ public class Radio {
         }
     }
 
+    public void previousStation() {
+        if (currentStation > minStation) {
+            currentStation = currentStation - 1;
+        }
+        if (currentStation == minStation) {
+            currentStation = maxStation;
+        }
+    }
+
+    public int currentVolume;
+    public int maxVolume = 10;
+    public int minVolume = 0;
+
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
+    public void setCurrentVolume(int newCurrentVolume) {
+        if (newCurrentVolume < minVolume) {
+            return;
+        }
+        if (newCurrentVolume > maxVolume) {
+            return;
+        }
+        currentVolume = newCurrentVolume;
+    }
+
+    public void increaseVolume() {
+        if (currentVolume < maxVolume) {
+            currentVolume = currentVolume + 1;
+        }
+        if (currentVolume == maxVolume) {
+            currentVolume = maxVolume;
+        }
+    }
+    public void decreaseVolume() {
+        if (currentVolume > minVolume) {
+            currentVolume = currentVolume - 1;
+        }
+        if (currentVolume == minVolume) {
+            currentVolume = minVolume;
+        }
+    }
+
 }
