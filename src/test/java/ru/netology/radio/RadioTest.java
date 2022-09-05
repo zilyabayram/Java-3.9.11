@@ -17,6 +17,17 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldSetStationIfMin() {
+        Radio radio = new Radio();
+
+        radio.setCurrentStation(-1);
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        System.out.println(radio.currentStation);
+    }
+
+    @Test
     public void setNextStation() {
         Radio radio = new Radio();
         radio.setCurrentStation(5);
