@@ -10,7 +10,7 @@ public class Radio {
     private final int maxVolume = 100;
     private final int minVolume = 0;
 
-    public Radio (int possibleStation) {
+    public Radio(int possibleStation) {
         this.possibleStation = possibleStation;
         this.maxStation = possibleStation - 1;
     }
@@ -38,6 +38,14 @@ public class Radio {
 
     public int getMinVolume() {
         return minVolume;
+    }
+
+    public int getPossibleStation() {
+        return possibleStation;
+    }
+
+    public void setPossibleStation(int possibleStation) {
+        this.possibleStation = possibleStation;
     }
 
     public void setCurrentStation(int newCurrentStation) {
